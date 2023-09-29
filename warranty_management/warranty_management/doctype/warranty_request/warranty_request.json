@@ -1,0 +1,342 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2016-05-17 17:00:31.327565",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "customer_name",
+  "complaint_date",
+  "to_warehouse",
+  "serial_no_cb",
+  "serial_no",
+  "status",
+  "resolution_date",
+  "scrap_warehouse",
+  "section_break0",
+  "warranty_request_purposes",
+  "more_info",
+  "customer_feedback",
+  "col_break3",
+  "amended_from",
+  "company",
+  "contact_info_section",
+  "customer_address",
+  "contact_person",
+  "col_break4",
+  "territory",
+  "customer_group",
+  "stock_entry",
+  "warranty_claim",
+  "delivery_note",
+  "is_paid",
+  "is_item_confirmed",
+  "is_testing_started",
+  "is_testing_completed",
+  "is_testing_rejected",
+  "is_repairing_started",
+  "is_repairing_completed",
+  "is_item_to_be_replaced"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "WR-",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Test Customer",
+   "options": "Customer",
+   "print_hide": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "complaint_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "label": "Issue Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default Target Warehouse",
+   "no_copy": 1,
+   "options": "Warehouse",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "serial_no_cb",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "Serial No",
+   "options": "Serial No"
+  },
+  {
+   "default": "Start Receiving",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "\nOpen\nClosed\nStart Receiving\nConfirmed\nTesting\nTesting Completed\nReplacement\nRepairing\nRepairing Completed\nCanceled",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "resolution_date",
+   "fieldtype": "Date",
+   "label": "Repair Date",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "section_break0",
+   "fieldtype": "Section Break",
+   "oldfieldtype": "Section Break",
+   "options": "icon-wrench"
+  },
+  {
+   "fieldname": "warranty_request_purposes",
+   "fieldtype": "Table",
+   "label": "Warranty Request Purposes",
+   "options": "Warranty Request Purposes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "more_info",
+   "fieldtype": "Section Break",
+   "label": "More Information",
+   "options": "icon-file-text"
+  },
+  {
+   "fieldname": "customer_feedback",
+   "fieldtype": "Small Text",
+   "label": "Customer Feedback"
+  },
+  {
+   "fieldname": "col_break3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Visit",
+   "print_hide": 1,
+   "read_only": 1,
+   "width": "150px"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "customer",
+   "fieldname": "contact_info_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Info",
+   "options": "icon-bullhorn"
+  },
+  {
+   "fieldname": "customer_address",
+   "fieldtype": "Link",
+   "label": "Customer Address",
+   "options": "Address",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "col_break4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "warranty_claim",
+   "fieldtype": "Link",
+   "label": "Warranty Claim",
+   "options": "Warranty Claim",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Delivery Note",
+   "options": "Delivery Note",
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Paid",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_item_confirmed",
+   "fieldtype": "Check",
+   "label": "Is Item Confirmed",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_testing_started",
+   "fieldtype": "Check",
+   "label": "Is Testing Started",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_testing_completed",
+   "fieldtype": "Check",
+   "label": "Is Testing Completed",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_testing_rejected",
+   "fieldtype": "Check",
+   "label": "Is Testing Rejected",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_repairing_started",
+   "fieldtype": "Check",
+   "label": "Is Repairing Started",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_repairing_completed",
+   "fieldtype": "Check",
+   "label": "Is Repairing Completed",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_item_to_be_replaced",
+   "fieldtype": "Check",
+   "label": "Is Item To Be Replaced",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "Scrap Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "icon": "icon-bug",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-08 14:35:06.200290",
+ "modified_by": "Administrator",
+ "module": "Warranty Management",
+ "name": "Warranty Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Warranty Management Admin",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer_name",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
